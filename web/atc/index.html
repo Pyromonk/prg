@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="A construction site for the clicking ones">
+	<meta name="keywords" content="Genesis, Threnody, Oulipo, Zeugma">
+	<link rel="icon" href="../img/fav.ico">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
+	<title>Absurd Text Constructor</title>
+</head>
+<body><div id="cnt">
+	<div id="top" class="tbl">
+		<div id="lft">
+			<textarea id="txt"></textarea>
+			<div id="rsl"></div>
+		</div>
+		<div id="rgt">
+			<p>Input text. Make sure everything's the way you want it, because you won't be able to make any changes to the initial wording after you hit "Save".</p>
+			<p>Once the text is saved, you will be presented with a set of controls that will allow you to pick out nouns, verbs, adverbs and adjectives. When you've selected the ones you need, click "Submit" to send the data.</p>
+			<p>The server will randomly replace words with one another in each group and present you with the text resulting therefrom.</p>
+			<p>For outputting poetry, you need to pick a number upon which the length of lines in your poem is going to depend. The algorithm is loosely based on the prosody of ancient Greeks and Romans. Poetry mode is also going to remove all punctuation from the input text.</p>
+			<p>Non-English characters, numbers and some offending punctuation will be removed for both modes. Capitalisation is not retained either.</p>
+			<p>For more interesting results, combine this tool with the <a href="../rpc/index.php" target="_blank">Random Paragraph Creator</a>.</p>
+			<div id="ctr">
+				<div>
+					<label title="Noun" class="nun"><input type="radio" name="pos" id="nun" checked="checked">n.</label>
+					<label title="Verb" class="vrb"><input type="radio" name="pos" id="vrb">v.</label>
+					<label title="Adjective" class="adj"><input type="radio" name="pos" id="adj">adj.</label>
+					<label title="Adverb" class="adv"><input type="radio" name="pos" id="adv">adv.</label>
+				</div>
+				<div>
+					<div class="clc">
+						<p>Pick one of the parts of speech above and start clicking away at the words to the left. Selecting a word adds it to the corresponding list, selecting it again &ndash; removes it.</p>
+						<p>Push "Submit" down below once you're finished.</p>
+						<p>This explanation will go away as soon as you add at least 1 noun to the list.</p>
+					</div>
+					<div class="clc"></div>
+					<div class="clc"></div>
+					<div class="clc"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="btm" class="tbl">
+		<div>
+			<input type="button" value="Save">
+			<label class="sbm">Prose<input type="radio" name="sbm" value="prs" checked="checked"></label>
+			<input type="button" value="Submit" class="sbm">
+			<label class="sbm"><input type="radio" name="sbm" value="ptr">Poetry</label>
+			<input type="number" name="num" class="sbm" value="3" min="0">
+		</div>
+	</div>
+</div></body>
+</html>

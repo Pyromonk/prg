@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+* { background: url(img/brfc.jpg) repeat fixed; font: 14px Verdana, Arial; }
+html { padding: 5px; }
+img { border: 0; }
+
+[id] { position: absolute; }
+
+#caption { top: 5%; left: 50%; width: 50%; margin-left: -25%; text-align: center; }
+#credits { bottom: 10px; }
+#info { bottom: 30px; font-style: italic; }
+#jsun { top: 50%; left: 50%; margin: -188px 0 0 -255px; }

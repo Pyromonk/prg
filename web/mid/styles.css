@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+* { box-sizing: border-box; }
+
+body, html { font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; height: 100%; margin: 0; padding: 0; background-color: #ffffff; }
+fieldset+fieldset { margin-top: 5px; }
+h1, h2, h3, h4, h5, h6, legend { margin-top: 0px; font-family: Merriweather, Times, 'Times New Roman', serif; }
+
+input[type="button"], input[type="file"], input[type="reset"], input[type="submit"] { cursor: pointer; }
+input[type="number"] { width: 4em; }
+
+#container { display: table-row; }
+#container > div { display: table-cell; padding: 20px; }
+#help { display: none; width: 100%; padding: 40px; position: absolute; top: 0; bottom: 0; z-index: 1; background-color: rgba(225, 225, 225, 0.9); }
+#help > div { max-height: 100%; padding: 20px; border: 1px solid black; background-color: #fcfcfc; overflow-y: auto; }
+#input { width: 62%; position: relative; }
+#main_form { margin-top: 30px; }
+#main_form input[type="submit"] { margin: 5px 5px 0; float: right; }
+#output { width: 38%; border-left: 1px solid black; }
+#question { padding: 10px; border: 1px solid black; position: absolute; top: 20px; right: 20px; cursor: pointer; }
+#wrapper { display: table; width: 100%; height: 100%; position: relative; border-collapse: collapse; }
+
+@media (max-width: 768px) {
+
+#container > div { display: block; width: 100%; }
+#output { margin-top: 25px; border-top: 1px solid black; border-left: none; }
+
+}

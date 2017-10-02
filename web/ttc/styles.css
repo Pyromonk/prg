@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+* { font: 14px Verdana, Arial; box-sizing: border-box; }
+table { border-collapse: collapse; }
+td, th { border: 1px solid black; padding: 4px; }
+
+#out { display: none; }
