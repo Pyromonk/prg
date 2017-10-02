@@ -52,9 +52,9 @@ function reportProblems($txt) {
 	$addressee = "name@domain.extension";
 	$subject = "NationStates";
 	$message = "I need an oilcan, pronto: ".$txt;
-	$headers = array(); //again
-	$headers = "From: testlandia@nationstates.net\r\n"; //change this line and the following one to reflect your bot's nation name
-	$headers = "Reply-To: testlandia@nationstates.net";
+	$headers = ""; //again
+	$headers .= "From: testlandia@nationstates.net\r\n"; //change this line and the following one to reflect your bot's nation name
+	$headers .= "Reply-To: testlandia@nationstates.net";
 	mail($addressee, $subject, $message, $headers);
 }
 ?>
