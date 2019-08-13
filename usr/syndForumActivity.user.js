@@ -29,18 +29,18 @@ t.appendChild(frm);
 
 function ajaxQuery(url, method, param, async, onsuccess, onfailure) {
 	var xmlHttpRequest = new XMLHttpRequest();
-	if (async == true) {
+	if(async == true) {
 		xmlHttpRequest.onreadystatechange = function () {
-			if (xmlHttpRequest.readyState == 4 && xmlHttpRequest.status == 200 && typeof onsuccess != 'undefined') { onsuccess(xmlHttpRequest); }
+			if(xmlHttpRequest.readyState == 4 && xmlHttpRequest.status == 200 && typeof onsuccess != 'undefined') { onsuccess(xmlHttpRequest); }
 			else if (xmlHttpRequest.readyState == 4 && xmlHttpRequest.status != 200 && typeof onfailure != 'undefined') { onfailure(xmlHttpRequest); }
 		}
 	}
-	if (method == 'POST') { xmlHttpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); }
+	if(method == 'POST') { xmlHttpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); }
 	xmlHttpRequest.open(method, url, async);
 	xmlHttpRequest.send(param);
-	if (async == false) {
-		if (xmlHttpRequest.status == 200 && typeof onsuccess != 'undefined') { onsuccess(xmlHttpRequest); }
-		else if (xmlHttpRequest.status != 200 && typeof onfailure != 'undefined') { onfailure(xmlHttpRequest); }
+	if(async == false) {
+		if(xmlHttpRequest.status == 200 && typeof onsuccess != 'undefined') { onsuccess(xmlHttpRequest); }
+		else if(xmlHttpRequest.status != 200 && typeof onfailure != 'undefined') { onfailure(xmlHttpRequest); }
 	}
 }
 
