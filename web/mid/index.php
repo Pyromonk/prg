@@ -64,6 +64,7 @@ function rm($dir) { //remove a directory
 <html lang="en-gb">
 <head>
 	<meta charset="utf-8">
+	<meta name="author" content="GoreGrindGeek">
 	<meta name="description" content="У меня проблемы с фантазией">
 	<meta name="keywords" content="Мизогиния, Катехон">
 	<link rel="icon" href="../img/fav.ico">
@@ -121,7 +122,7 @@ function rm($dir) { //remove a directory
 						}
 						if(isset($p['nchk'])) {
 							$nsnm = (int)$p['nsnm'];
-							$nsnm = $nsnm<0 ? 0 : ($nsnm>4 ? 4 : $nsnm);
+							$nsnm = $nsnm<0 ? 0 : ($nsnm>9 ? 9 : $nsnm);
 							$nkey = (int)$p['nkey'];
 							$nkey = $nkey<0 ? 0 : ($nkey>11 ? 11 : $nkey);
 							$midi->normalise(0, $nsnm, $nkey);
@@ -189,6 +190,9 @@ function rm($dir) { //remove a directory
 							<option value="4"<?=isset($p['nsnm']) ? ((int)$p['nsnm']===4 ? ' selected' : '') : '';?>>Pentatonic Minor</option>
 							<option value="5"<?=isset($p['nsnm']) ? ((int)$p['nsnm']===5 ? ' selected' : '') : '';?>>Blues Hexatonic Major</option>
 							<option value="6"<?=isset($p['nsnm']) ? ((int)$p['nsnm']===6 ? ' selected' : '') : '';?>>Blues Hexatonic Minor</option>
+							<option value="7"<?=isset($p['nsnm']) ? ((int)$p['nsnm']===7 ? ' selected' : '') : '';?>>Half-Whole Diminished</option>
+							<option value="8"<?=isset($p['nsnm']) ? ((int)$p['nsnm']===8 ? ' selected' : '') : '';?>>Whole-Half Diminished</option>
+							<option value="9"<?=isset($p['nsnm']) ? ((int)$p['nsnm']===9 ? ' selected' : '') : '';?>>Tritone</option>
 						</select></label>,
 						<label>key: <select name="nkey"<?=isset($p['nchk']) ? '' : ' disabled';?>>
 							<option value="0"<?=isset($p['nkey']) ? ((int)$p['nkey']===0 ? ' selected' : '') : ' selected';?>>C</option>
@@ -209,7 +213,7 @@ function rm($dir) { //remove a directory
 						<legend>
 							<input type="checkbox" name="ochk" id="ochk" onclick="javascript: disableInputs(this);"<?=isset($p['ochk']) ? ' checked' : '';?>>&nbsp;<label for="ochk">Octave Range</label>
 						</legend>
-						Limit notes to octaves between <input type="number" name="omnn" value="<?=isset($p['omnn']) ? $p['omnn'] : 1;?>" min="1" max="4"<?=isset($p['ochk']) ? '' : ' disabled';?>> and <input type="number" name="omxn" value="<?=isset($p['omxn']) ? $p['omxn'] : 6;?>" min="6" max="9"<?=isset($p['ochk']) ? '' : ' disabled';?>> inclusive.
+						Limit notes to octaves between <input type="number" name="omnn" value="<?=isset($p['omnn']) ? $p['omnn'] : 1;?>" min="1" max="3"<?=isset($p['ochk']) ? '' : ' disabled';?>> and <input type="number" name="omxn" value="<?=isset($p['omxn']) ? $p['omxn'] : 6;?>" min="4" max="9"<?=isset($p['ochk']) ? '' : ' disabled';?>> inclusive.
 					</fieldset>
 					<?php } ?>
 					<input type="submit" value="Modify">

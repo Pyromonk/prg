@@ -1019,6 +1019,15 @@ function _getScale($idt, $snm, $key) { //$idt - is this a drum track, $snm - sca
 			case 6: //blues hexatonic minor
 				$mask = array(1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0); //R, W+H, W, H, H, W+H, W
 				break;
+			case 7: //half-whole diminished
+				$mask = array(1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0); //R, H, W, H, W, H, W, H, W
+				break;
+			case 8: //whole-half diminished
+				$mask = array(1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1); //R, W, H, W, H, W, H, W, H
+				break;
+			case 9: //tritone
+				$mask = array(1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0); //R, H, W+H, W, H, W+H, W
+				break;
 		}
 		$mask = _array_circular_shift($mask, $key); //transpose scale by the key
 		for($i=$notes[0], $l=$notes[1]+1; $i<$l; $i++) {
